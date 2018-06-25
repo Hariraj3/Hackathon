@@ -1,0 +1,126 @@
+Day1
+-----
+Trainer Name: SHANTHANU BANERJEE
+
+Set E
+
+C:\Program Files\Java\jre1.8.0_161
+
+%PATH%;%JAVA_HOME%\bin
+
+
+
+javac -version
+when you install jre, it will there in register, checking in java will not help
+
+
+
+
+
+
+;C:\Program Files\Microsoft VS Code\bin;C:\Users\verizon\AppData\Roaming\npm
+
+
+
+1. space is not allowed.
+2. no spring boot without rest
+3. Git repository
+https://github.com/sbtalk71/spring-restful
+https://github.com/sbtalk71/spring-vdsi-hyd
+Build and Project Management Tool: Maven
+without maven spring boot is unmanagement
+
+Gradle - based on groovy
+Maven - integrated with eclipse
+
+Java EE - Enterprise Edition., can be used to create enterprise edition which runs on app server.
+UI - JSP, servlets
+BL - EJB(enterprise Java bean)
+
+java object represents row in a table is called EJB, enttity java bean
+
+session bean - primary and premium objects.
+
+without using app server want to build an app , comes the spring 
+
+session bean - busines logic and it's replacement is spring.
+
+spring, its another approach to create EE application withhout using EJB
+design pattern are implemented by spring itself.
+
+props is .net equaivalent to jave bean(get set property)
+
+spring framework is alternate to Java EE to craete enterpise application.
+
+Plain old java object(POJO) - simplrer java object.
+
+spring mostly takes features frm thisr party.
+
+
+
+Spring Framework - Basics
+1. all popuplar design pattens are in build.
+2. its uses IOC. It's dependency injecty container
+3. leght weight
+5.Service is available
+3. can built al sort of app in business and data
+5.can create interface 
+6. replacemenet for EEBC
+7. for every task  have bean
+establish the contact between
+8, chekec or unchked excaption
+9. in rping api no nchecked box
+10. 
+
+API - application provider interface
+sPI - 
+
+Spring Framework has modules
+1. Dependency container are called core module
+2. in core module we conain  6 jars
+3.core application doesn't required all modules.
+4, spring has jars, Jars are characterized
+5. DAO, OEM, GGG[, wb,AOPP and core
+sptinr can suppot existing java ore
+6. spring requires JVM to run
+spring modules can have it in a container whih spring container
+
+
+
+Spring Core
+Spring main engine is IOC Container
+it manages the life cycle of bean
+1. need an xml file as a container to the spring
+benefit: do not 
+2. by default bean will be singleton.
+
+
+Dependency will be injected through setter or constructor to the root.
+All the beans or class will be configured thru xml.
+once the xml is configured, feed the xml to context
+1. Setter Injection
+2. Constructor Injection
+
+
+
+pom file
+project object management file
+
+maven is based on plugins
+
+
+
+no more context, spring boot means annotations
+
+
+
+<bean../>
+@component - Helper clas Beans
+@Service - Service Layer Bens
+@Repository -  Data Layer Beans
+@Controller = MYC Contraoller Beans
+@Coniguration - Alternate to .xml config
+
+@Bean -- for metod level declaration of beans.
+
+

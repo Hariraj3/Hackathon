@@ -124,3 +124,83 @@ no more context, spring boot means annotations
 @Bean -- for metod level declaration of beans.
 
 
+JNDI - It's the part of the app server where all objects are stored.
+
+
+
+root/admin
+
+
+
+
+
+
+
+mysql
+create db
+create database <<databasename>>;
+
+show db that you have connected to
+select database() from dual;
+
+
+display all databases
+show databases;
+
+display all tables
+show tables;
+
+
+create table
+create table produts(prodid int primary key, name varchar(20), description varchar(30), unitprice double, units int);
+
+insert into produts(prodid, name, description, unitprice, units) values(1001,"Apple Macbook", "Laptop", 80000,10),(1002,"Apple Ipad", "Tablet", 30000,5),(1003,"iPhone", "Mobile", 80000,10),(1004,"Dell Inspiron", "Laptop", 30000,20),(1005,"Parker", "Pen", 350,10);
+
+
+
+srping ui
+how to access db, 
+how to perform db access
+transaction manager
+what type of transaction manager supported by string
+
+
+
+
+
+Hibernate - ORM(Object relational mapper)
+JPA - Java persistant api
+
+How JPA works?
+
+
+
+
+Spring MVC
+----------
+MVC - Web application framework
+Model-View-Controller
+Like MVC version in .Net
+Struts
+Struts2
+Tapesry
+JSF
+Spring MVC
+
+
+
+REST - Representational state transfer
+Webservice
+
+
+
+
+http://start.spring.io
+
+
+CQRS - Command Query Responsibility Segregation
+design pattern for db interaction microservices
+
+
+HYSTRIX - used for service monitoring
+

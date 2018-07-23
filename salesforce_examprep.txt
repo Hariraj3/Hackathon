@@ -1,0 +1,200 @@
+30782
+
+admin@admincertprep#.com
+Last digits(#) ranges
+30782
+
+Password1
+
+
+admin@admincertprep30782.com
+
+When you add new value to opportunity stage
+1. forecast category
+2. Probability percentage
+3. Type (Open, Closed/Won, Closed/Lost)
+----------------
+4 levels of security
+1. Org level - You can restrict thru trusted ip, login ip range(definied in profile) and login hours(its static and the time zone is user level).
+2. Object level  - profile set which objects you are allowed to access. Following can be restricted.
+objects, records, fields, layout, reports and dashboards, mass email, 
+object level and field level permission set can be set.
+chances are can login to laptop but not on device, then set "Connected apps" in your profile.
+license, CRED permisisons 
+3. Record level- OWD(organisation wise default)
+by default records u own u have acess to it. You can see, edit, delete and transfer to diff user. Can enjoy the previliges only if the profile allow to do. If the profile says u can create then u can't edit or delete or transfer.
+records that you don't own work based on org level settings(public readonly, private, public read and write)
+private - you own only u can see, others cant see. set to provaite can't be seen anywhere
+public readonly - if you are not owner then u can't delete, edit and transfer
+public readandwrite - can't delete or transfer records owned by someone else.
+
+can create users without any role(None specfified). This user record will not set role hierarchy, even the roles above him can't view, edit or delete.
+sharing rules - 
+-if i want to share the records but want to add filters to it, u can do it based on criteria based on sharing. if there is a question where specific records to be shared then it's sharing rules.
+
+-certain opportuities to be shared with the team mates then you can do it by creating a team for account, opporunity and cases alone. For other objects you can't create a team.
+-By default, user above the heirarchy will act as owner of the record.
+4. Field level
+it can be controlled at object level which is set in profile.
+---------------------
+
+To add users u need license
+you can't give full access on sharing rule.
+In profile level u can set an option to transfer leads.
+Trusted ip u will not get activation code, whereas login ip will get activation code. user ip range can be overwritten with org level trusted ip range.
+
+NO QUESTIONS ON CUSTOM OBJECTS, ONLY ON STARND SOBJECTS
+
+When you convert an lead, it will be oppourintiy, account and contact.
+
+why do we crete record types?
+different layout for diff profiles
+one profile can see only one layout, if u want more then use record types.
+inside the field if we can regulate the values then record type
+
+if you want to setup a new record type, out of below which is mandate. Business process is something which is REQUIRED.
+business process, page layout and record type
+
+Field level security is also set on profile.
+
+workflow rule
+1.update  field - can trigger another action
+2. output message
+3. email - to trigger email template should be ready
+4. task - to trigger when a calendar activity been set to the user. assiging one task to role with mulitple user. It goes to the workflow owner.
+
+
+
+criteria for workflow rule
+created - will file when its created
+created and edited - any update action will be fired.
+
+what are the apossible scenario when workflow don't fire?
+before it fire when it not meet the criteria
+all time delay will go to queue, you can go to queue and delete it.
+
+
+Lightening Process builder. 
+-we can 8 actions. create a record, update record, send a mail, post to chatter, use a quick action, submit for approval, launch a flow, call apex.
+
+in pagelayout there is an option for a field to mark as required
+in profile, on ur field level security u have set not access to that field.
+
+read, create, edit, delete, view all data and modify all data
+
+View all data/modify all data set for the object - org level settings will not apply.
+---------------------
+How to create leads?
+we do by creating form, web to lead
+
+preparation for web to lead?
+hml form to be given
+give the details to fill the form
+get the leads or case
+we do create assignment rules
+
+field listing object - can set for 20 fields in a object, it maintains complete history and track the changes made to the field.
+
+
+Order of execution
+Validation rules
+assignment rules
+auto response rules
+workflow rules
+processes
+escalation rules
+
+
+standard objects that can be import using import wizard are
+Accounts and Contacts
+Leads
+Solutions
+Campaign Members
+--------
+
+Benefits of import wizard.
+Duplicate entrance can be blocked using data import wizard
+When using import records you can trigger whether workflow can be triggered or not?
+
+
+if universal required field or currency field is not mapped then the complete data upload is mapped.
+
+Data Loader
+-----------
+if more than 50k to be uploaded. Max 5million
+cannot prevent duplicate or can't match by id
+standard or custom can't be imported or exported
+
+we have data export wizard but we can't set filters. so for export with filtes use data loader
+
+
+page#70
+Answers
+1. Data loader bcoz filter cant be added to data export wizard
+2. data import wizard by disabling worflow trigger
+3. import accont first followed by contact. child can't exist without a parent.
+
+
+Page#74
+1. Data export wizard
+2. Data loader
+
+Reports and Dashboards
+----------------------
+for all std objects will have their own rports and templates.
+std reports can be modified, if u make a modification u can save as custom reports
+you can save the report in your personal folder or custom folder and the folder can be shared with other users.
+you can view, edit, manage(view, edit and move the report from one custom to other custom folder) the report
+Matrix, summary, joined and tabular are type of reports.
+
+
+page#84
+2. Joined report
+
+page#88
+1. pie or bar chart
+2. Grouped line chart
+3. Funnel chart
+
+Dashboard
+it doesn't refresh by itself, it has to be in folder and u can share trhe folder
+(important)RUNNING USER - when you ceate a dashboard u can specify name of the running user, which means if i spcify my name as running user in dashboard and set it 
+
+it simply whose visible on the dashboard i.e. only summary. it should be summary report as we are not displaying detail.
+
+
+Table, gauge, charts, metric display on dashboard
+
+
+
+Products
+we have an option to add products to salesforce
+
+
+
+
+admin@admincertprep30826.com
+
+
+
+
+
+26
+
+
+
+
+
+
+Practice Test
+--------------
+1. Adding emy to bob account account will make her to access all his records. if you move her to public, she can be member but can't view the records.
+
+3. can't use import wizard to delete records
+
+
+
+
+
+
+

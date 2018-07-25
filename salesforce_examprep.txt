@@ -196,5 +196,76 @@ Practice Test
 
 
 
+ADM 261:
+Naming Convention: admin@aw42524.com
+Password1
+
+
+Case Management
+
+BUSINESS PROCESS IS IMPORTANT - 2 QUESTIONS FOR SURE
+
+Case capture:
+Web 2 case
+Email 2 case
+Auto response rules(when a customer submit a form, we can send a auto response)
+Email Templates
+
+
+Case Assignment:
+Case Queue
+Assignment Rules
+
+Notification:
+Escalation Rules
+Workflow Rules
+Process Builder
+
+Default owner
+default owner of case when a assignment rule is not able to locate the owner.
+
+Automated case owner
+From the customer is filling the form, whatever the name that's been mentioned, it will be assigned to the user.
+
+
+design one queue
+
+design an html form for cases
+
+
+Email to case:
+mail subject will be case title and body will the case commit.
+There are 2 options
+Email client: - can download from developer portal
+-have an client tool which can be downloaded, but we need to set firewall to make it to work. In this there is no limit to the attachment
+option2:
+In salesforce, we have an option "Email-to-case" settings where we can edit and set "Enable email-to-case" and "Enable  On-demand-Service". But in this option we have limit of 25MB upload as attachment.
+
+
+Email template will be used for sending automated mails.
+
+
+
+
+
+
+
+
+Enable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

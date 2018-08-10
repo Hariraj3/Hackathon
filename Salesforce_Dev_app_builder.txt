@@ -1,0 +1,102 @@
+admin@pab1775.com
+Password1
+
+
+https://trialheadapac.mimeo.digital/library
+V05
+
+USKQPJULYVCM
+
+Trainer Name: Tri
+Email:  tripty.jha@salesforce.com
+tripty.jha@gmail.com
+
+Day1:
+----
+understand platform, size, alicense given to u.
+
+
+App is an logical container which connects all inter-related object together
+App contains objects/tabs. If you change app then you are only changing the container.
+
+Schema Builder
+use this tool to create, modify and look for an object.
+
+
+Exercise guide
+Exercise - 2 (Schema builder - objects - select from (custom objects)hg
+
+1. 7
+2. opporunity pipeline snapshot
+3. No relationship
+4. last modiifed by, owner, position, created by, candidate, currency
+5. 
+
+
+Object relationship
+1. Lookup
+It's not mandate to have parent. You need to do certain configuration for that.
+You can't create a contact without account. But, if you account been delete, contact can continue to exist.
+If you delete parent, ur child need not be deleted in lookup
+2. Master-detail
+-one to many relationship
+-tight coupling
+-if u delete a parent, all child will be deleted.
+- Parent is always required.
+3. Hierarchy
+If self with user object then it's hierarchy
+4. Self
+relationship with any other object then it's self.
+
+CHILD CAN HAVE MAX 40 LOOKUP AND ONLY 2 PARENTS FOR MASTER DETAIL
+   
+There is no self relationship, so need to work with lookup relationship.
+
+special cases for MD and picklist
+lookup to MD
+field should have parent before converting to MD
+pickuplist to picklist(multi)
+
+
+
+
+Day2
+----
+
+updating data
+- external id will the primary key of different objet. text, email, number are the numbers allowed in exernal.
+
+
+
+
+QUESTIONS
+---------
+when it is adivsiable dataloader instead of import wizard
+-when the amount of record exceed the wizard maximum
+-an imort load needs to be schedule on regular basis
+
+what is the import limit in import wizard?
+-50000
+
+which of the follwoing import the file format is accepted by dataloader
+-CSV
+
+which of the following statements are true about record IDs
+-18char case insensitive
+-15 char case sensitive
+
+
+https://test.salesforce.com - sandbox direct url
+Force.com LOGINS plugin to save salesforce credentials used if in case u forgot the sandbox name
+
+
+
+
+
+
+
+
+
+
+
+

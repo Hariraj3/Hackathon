@@ -1,0 +1,355 @@
+admin@pabcertprep1034.com
+Password1
+
+
+ORG > Files> download the zip
+USUT3THY6BPX
+
+1. external objects - couple of questions
+2. 
+
+
+knowledge check
+---------------
+Page 54
+1. Picklist, number and text
+2. sort and filter
+3. false
+
+
+1. section, visible, readonly
+2. False. whatever availble in custom object by default it will be availe in mobile app by default
+3. False
+4. Create record, log a call
+
+slide#88 is important - read it thoroghly
+
+slide#89
+1. False. When it's true we throw an error that's why it's false
+2. False
+3. False
+4. True
+5. False. You can't change on active approval process
+
+slide#99
+1. Fullcopy sandbox
+2. Changeset
+3. unmanaged package
+4. Force.com migration tool
+5. Developer Pro sandbox
+6. IDE development wizard as you will have local copy.
+
+
+
+Dev programming
+---------------
+admin@dex450.112.com
+
+Programmatic devlopment using apex and visualforce
+
+
+
+DEV450 - PD1 and PD2 certification
+
+server logs we can't access. Developer log we can access.
+
+Every primitive data type is considered as an object. IMPORTANT. eg: string, ID, number are all objects.
+
+
+When you are writing code usins SOQL, you should always write it in square bracket.
+
+Write SOQL query using anonymous windows
+List<Account> accts=[select Name, Industry, billingcountry from Account];
+for(Account a:accts)
+{
+    system.debug('Account Name: ' + a.Name);
+    system.debug('Account PK: ' + a.id);
+    system.debug('Account PK: ' + a.industry);
+}
+
+
+Query to return top 3 using SOQL
+you can order by and set the offset. can use it without order by also.
+SELECT Id, Name, Type, BillingCity FROM Account where BillingCity ='New York' offset 3
+OR
+this work with where clause, if the where clause doesn't return any value then in your apex u will get error whereas in query window no error will be thrown.
+SELECT Id, Name, Type, BillingCity FROM Account where BillingCity ='New York' limit 4
+
+
+1.Whenever you execute a SOQL query it returns SObject value.
+2. Database.query is used to fire dynamic query eg: Database.query('select id, subject from Case where ' + criteria);  criteria will be criteria = 'ClosedDate < TODAY'
+3. 
+
+
+
+
+
+
+
+
+
+//TASK 2: Use Database.query() to repair the code from Task 1.
+//--------------------------------------------------------------------------------------------
+Integer numDays = 10;
+String selectClause = 'SELECT Id, Subject, CreatedDate ';
+String fromClause = 'FROM Case ';
+
+//      date literal, then concatenate the variable numDays to the string to complete the where clause.
+String whereClause = ' where CreatedDate = LAST_N_DAYS:'+numDays;
+
+List<Case> cases = Database.query(selectClause + fromClause + whereClause);
+System.debug('Total number of cases: ' + cases.size());
+for (Case c : cases) {
+    System.debug(c);
+}
+
+
+
+//(OPTIONAL) TASK 3: Find records created using a particular record type.
+//--------------------------------------------------------------------------------------------
+
+//TODO: Review the following code that returns the Id of a Record Type
+Id productSupportId = Schema.SObjectType.Case.getRecordTypeInfosByDeveloperName().get('Product_Support').getRecordTypeId();
+
+String selectClause = 'SELECT Id, Status, Subject ';
+String fromClause = 'FROM Case ';
+
+//TODO: Define a string, whereClause, that will be used in
+System.debug(productSupportId);
+string whereClause = ' where recordTypeId = \'' +  productSupportId + '\'';
+List<Case> cases = Database.query(selectClause + fromClause + whereClause);
+System.debug('Total number of cases: ' + cases.size());
+for (Case c : cases) {
+    System.debug(c);
+}
+
+
+
+
+
+CHILD TO PARENT 
+1. Get firstname, lastname from contact and account name from account. Only  mapping records ot be return
+SELECT Id, FirstName, LastName, Account.Name FROM Contact where Account.Id <> null
+
+2. 
+select name, certification__r.Name, Duration__c  
+from course__c
+where certification__c <> null
+
+
+whenever u use soql in a list, you can update max of 200 update at a time. if the list object is outside the forloop then there is no restriction.
+
+for(list<contact> cts:[select id from contacts]) - if this contains 300 rows
+{
+ list<contacts> newlist;
+   for(contact c:cts) - fetch first 200
+   {
+	newlist.add(c)
+   }
+   update(newlist)
+ list<contacts> newlist2;
+   for(contact c:cts) - fetch remainig 100
+   {
+	newlist2.add(c)
+   }
+   update(newlist2)
+}
+
+
+
+option 2 - new restricton
+list<contacts> newlist;
+for(list<contact> cts:[select id from contacts]) - if this contains 300 rows
+{
+   for(contact c:cts)
+   {
+	newlist.add(c)
+   }
+}
+update(newlist)
+
+QUERY LIMITS
+-------------
+Total number of SOQL queries issued in a transaction
+100
+Total number of records retrieved by SOQL queries.
+50000
+Total heap size.
+6mb
+
+
+
+
+4 ways to pass data for testing
+1. static files
+2. factory
+3. test data
+4. seealldata attribute
+
+
+150 DML statements can be executed.
+when you have startTest() - this will provide 150 more additional goverance
+
+Trigger best practices
+======================
+1 trigger for an object
+modularity. Trigger should act like a traffic cop and add modularity to the trigger
+
+
+Best practices with DML
+1. 
+
+
+
+
+
+
+to enable lightning page
+
+settings > my personal information > advances user details > enable developer mode
+
+
+
+
+chossing a custom controller vs controller extension
+1. custom - no dependencies with any objects so custom
+2. extension - it gets launches from another object so it should custom
+3. custom- no dependencies with any objects so custom
+4. Custom - here only navigation getting changed/changing the behaviour of save. So it's custom
+
+
+
+
+
+SOQL vs SQQL
+20
+2000
+6MB - sync in 12MB - async
+
+
+
+admin@pd1certprepa170.com
+
+DEV450 - PD1(Platform Development 1) Certification
+
+Total Questions: 60
+Pass percentage: 65%
+
+
+----------------
+can aproval process/workflow/process builder delete a record as an action? - NO
+can visual workflow can delete a record as an action? - YES
+
+
+
+supports atim ebase action
+workflow/process builder - Yes
+
+support user interaction
+visual flow/approvals - yes
+
+can call apex code
+process/VF - Yes
+
+
+CRT-450 student guide-summer18
+
+Slide21
+1. Dataloader
+2. Import Wizard
+3. 
+
+
+slide#24
+1. create RSF in master field
+2. create formula in opoorunity. opp to account grab the field and display it here. cross field
+
+
+Apex is on demand - add this point to "What is Apex?"
+
+slide#27
+1.3
+2.2
+3.No, duplicate will be ignored
+4.3 because list allow duplicates
+
+slide#28
+3rd loop is best.
+
+slide#33
+second half
+1.SOQL
+2.SOQL
+3.SOSL
+4.SOQL
+5.SOQL
+
+
+slide#34
+1.Update
+2.insert
+3.delete
+4.upsert
+5.undelete
+
+slide#36
+
+
+slide#37
+100 - query per transaction
+150 - dml
+50000 - number of records retuned by soql
+1000 - number of records affected by dml
+1. 100
+2.error. will throw limit exception
+
+
+slide#38
+except A all will throw error
+
+second half
+-----------
+1. will throw exception and will revert everything
+
+
+
+slide#39
+
+
+slide#46
+need an id to do any of this job
+
+
+slide#49 IMPORTANT
+1. RFS
+
+
+slide#57
+page1 - yes required for course delivery
+page2 - yes required for certificaiton
+page3 - yes
+
+
+slide#60
+1.extension. if you want to draft everything on your own then custom controller
+
+scenario
+1.custom controller
+2.controller extension
+3.custom controller
+4.controller extension 
+
+
+slide#72
+1.149 left out as 1 got fired
+2.150
+3.149 left out as 1 got fired, since it got reset.
+
+
+runas different to check the with/without sharing is working correctly or not.
+
+
+finest is the highest debug log level and info is the lowest log level.
+
+
+
